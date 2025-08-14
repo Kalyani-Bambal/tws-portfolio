@@ -2,6 +2,7 @@
 
 A simple, fast, and fully static personal portfolio site built with **HTML**, **CSS**, and **JavaScript**.  
 This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** whenever changes are pushed to the `main` branch.
+
 ---
 
 ## ✨ Features
