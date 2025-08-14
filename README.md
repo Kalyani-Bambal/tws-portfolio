@@ -1,17 +1,18 @@
-## TWS Portfolio
+# 🌟 TWS Portfolio
 
-A simple, fast, and fully static personal portfolio site built with **HTML**, **CSS**, and **JavaScript**.  
-This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** whenever changes are pushed to the `main` branch.
+A simple, fast, and fully static personal portfolio website built with **HTML**, **CSS**, and **JavaScript**.  
+This project **automatically deploys** to an **Amazon S3** bucket using **GitHub Actions** whenever changes are pushed to the `main` branch.
 
 ---
 
 ## ✨ Features
-- 🔧 Zero-framework static site: `index.html`, `style.css`, `script.js`
-- 🚀 Continuous deployment to **S3** on every push to `main`
-- 🌐 Optional S3 Static Website Hosting (public read)
-- 🧪 Easy local development (just open `index.html` or run a tiny web server)
+- 🔧 **Zero-framework static site**: `index.html`, `style.css`, `script.js`
+- 🚀 **Continuous deployment** to S3 on every push to `main`
+- 🌐 **Optional S3 Static Website Hosting** (public read)
+- 🧪 **Easy local development** — open `index.html` directly or run a local web server
 
 ---
+
 
 ## 📁 Project Structure
 ```
