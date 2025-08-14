@@ -26,11 +26,6 @@ This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** wh
 ├─ script.js # Client-side scripts
 └─ README.md
 
----
-
-
----
-
 ## 🧰 Prerequisites
 
 - A GitHub repository for this project
