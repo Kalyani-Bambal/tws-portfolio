@@ -15,7 +15,7 @@ This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** wh
 ---
 
 ## 📁 Project Structure
-
+```
 📂 Folder Structure
 ├─ .github/
 │ └─ workflows/
@@ -24,6 +24,7 @@ This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** wh
 ├─ style.css # Styles
 ├─ script.js # Client-side scripts
 └─ README.md
+```
 
 ## 🧰 Prerequisites
 
