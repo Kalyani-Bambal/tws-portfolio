@@ -28,34 +28,39 @@ This project **automatically deploys** to an **Amazon S3** bucket using **GitHub
 
 ## 🧰 Prerequisites
 
-- A GitHub repository for this project
-- An **AWS account** with permissions to create/use S3
-- **AWS CLI** (optional for manual deploys)
-- An **S3 bucket** (example in this README uses `tws-portfolio-1234` in `us-east-1`)
+Before setting up and deploying this project, ensure you have:
 
-> You can rename the bucket and region—just keep the values in `main.yml` and your AWS setup in sync.
+- 📂 A **GitHub repository** for this project
+- ☁️ An **AWS account** with permissions to create and manage S3 buckets
+- 💻 **AWS CLI** installed (optional, for manual deployments)
+- 🪣 An **S3 bucket** (example: `tws-portfolio-1234` in `us-east-1`)
+
+> 💡 You can rename the bucket and region — just make sure to update the values in both `main.yml` and your AWS setup.
 
 ---
 
-## 🧪 Run Locally (Dev)
-You can simply open `index.html` in your browser, or start a tiny web server:
+## 🧪 Run Locally (Development)
 
-**Python 3**
+You can preview the project locally by either opening `index.html` in your browser or running a lightweight web server.
+
+**Using Python 3:**
 ```bash
 python3 -m http.server 8000
 # Visit http://localhost:8000
 ```
-
 ---
 
 ## ☁️ One-Time AWS Setup
 
-1) Create the S3 bucket
-   aws s3 mb s3://tws-portfolio-1234 --region us-east-1
-2) Simple public website (S3 Static Website Hosting)
-   
-   Disable “Block all public access” on the bucket.
-   Add this Bucket Policy (read-only public access to objects):
+### 1️⃣ Create the S3 Bucket
+```bash
+aws s3 mb s3://tws-portfolio-1234 --region us-east-1
+```
+### 2️⃣ Enable S3 Static Website Hosting
+```bash
+Disable "Block all public access" on the bucket.
+Add the following Bucket Policy to allow public read access:
+```
 ```
    {"Version": "2012-10-17",
        "Statement": [
@@ -71,43 +76,54 @@ python3 -m http.server 8000
 ```
 ---
 
-## You’ll get a Website Endpoint like:
+## 🌐 Website Endpoint
+
+Once hosting is enabled, your site will be available at a URL like:  
+
    http://tws-portfolio-1234.s3-website-us-east-1.amazonaws.com
 
 ---
 
 ## 🤖 CI/CD with GitHub Actions
-  This repository uses the following workflow (in .github/workflows/main.yml):
-  
-## Add required GitHub Secrets
-```
-  In your repo settings → Secrets and variables → Actions:
-   AWS_ACCESS_KEY_ID
-   AWS_SECRET_ACCESS_KEY
-```
+
+This project uses GitHub Actions for **automatic deployment** to S3 whenever changes are pushed to the `main` branch.  
+The workflow file is located at:  
+
 --- 
+
+### 🔑 Required GitHub Secrets
+In your repository, go to:  
+**Settings → Secrets and variables → Actions**, and add:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+
+---
 
 ## ❗ Troubleshooting
 
-## 403 Forbidden on website endpoint
--Public access still blocked or bucket policy missing
--Wrong region website endpoint
+### 🚫 403 Forbidden on Website Endpoint
+- Public access might still be blocked, or the **bucket policy** is missing.
+- You may be using the wrong **region-specific website endpoint**.
 
-## GitHub Actions fails with AccessDenied
--IAM user is missing s3:PutObject, s3:DeleteObject, or s3:ListBucket
--Secrets not configured or misspelled
+### 🔒 GitHub Actions Fails with "AccessDenied"
+- The IAM user is missing one or more of the following permissions:  
+  `s3:PutObject`, `s3:DeleteObject`, `s3:ListBucket`
+- GitHub **Secrets** are not configured or have typos.
 
-## Bucket name already exists
--S3 bucket names are globally unique; pick a different one (e.g., tws-portfolio-<random>)
-
----
+### ⚠️ Bucket Name Already Exists
+- S3 bucket names are **globally unique**.  
+- Choose a different name, e.g.:  
+  `tws-portfolio-<random-string>`
 
 ## 📜 License
-MIT — feel free to use and adapt. If your project requires a different license, update this section.
+This project is licensed under the **MIT License** — feel free to use, modify, and distribute.  
+If your project requires a different license, update this section accordingly.
 
 ---
 
-## ✨Output Screenshot
-## tws-portfolio
+## ✨ Output Screenshot
 
-  <img width="1122" height="536" alt="image" src="https://github.com/user-attachments/assets/855448df-db74-4b93-a4ef-fe78d287d583" />
+### TWS Portfolio
+<img width="1122" height="536" alt="Portfolio Screenshot" src="https://github.com/user-attachments/assets/855448df-db74-4b93-a4ef-fe78d287d583" />
+
