@@ -16,8 +16,6 @@ This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** wh
 
 ## 📁 Project Structure
 
----
-
 ## 📂 Folder Structure
 
 ├─ .github/
@@ -59,9 +57,9 @@ python3 -m http.server 8000
 ☁️ One-Time AWS Setup
 
 1) Create the S3 bucket
-   --- 
+
    aws s3 mb s3://tws-portfolio-1234 --region us-east-1
-   ---
+
 2) Simple public website (S3 Static Website Hosting)
    
    **Disable “Block all public access” on the bucket.
