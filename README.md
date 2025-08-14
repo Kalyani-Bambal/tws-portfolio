@@ -47,7 +47,7 @@ python3 -m http.server 8000
 
 ---
 
-☁️ One-Time AWS Setup
+## ☁️ One-Time AWS Setup
 
 1) Create the S3 bucket
    aws s3 mb s3://tws-portfolio-1234 --region us-east-1
@@ -70,41 +70,41 @@ python3 -m http.server 8000
 ```
 ---
 
-# You’ll get a Website Endpoint like:
+## You’ll get a Website Endpoint like:
    http://tws-portfolio-1234.s3-website-us-east-1.amazonaws.com
 
 ---
 
-🤖 CI/CD with GitHub Actions
+## 🤖 CI/CD with GitHub Actions
   This repository uses the following workflow (in .github/workflows/main.yml):
   
-# Add required GitHub Secrets
+## Add required GitHub Secrets
   In your repo settings → Secrets and variables → Actions:
     **AWS_ACCESS_KEY_ID
     **AWS_SECRET_ACCESS_KEY
 --- 
 
-❗ Troubleshooting
+## ❗ Troubleshooting
 
-# 403 Forbidden on website endpoint
+## 403 Forbidden on website endpoint
 -Public access still blocked or bucket policy missing
 -Wrong region website endpoint
 
-# GitHub Actions fails with AccessDenied
+## GitHub Actions fails with AccessDenied
 -IAM user is missing s3:PutObject, s3:DeleteObject, or s3:ListBucket
 -Secrets not configured or misspelled
 
-# Bucket name already exists
+## Bucket name already exists
 -S3 bucket names are globally unique; pick a different one (e.g., tws-portfolio-<random>)
 
 ---
 
-📜 License
+## 📜 License
 MIT — feel free to use and adapt. If your project requires a different license, update this section.
 
 ---
 
-✨Output Screenshot
-# tws-portfolio
+## ✨Output Screenshot
+## tws-portfolio
 
   <img width="1122" height="536" alt="image" src="https://github.com/user-attachments/assets/855448df-db74-4b93-a4ef-fe78d287d583" />
