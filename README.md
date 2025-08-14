@@ -16,8 +16,7 @@ This project auto-deploys to an **Amazon S3** bucket using **GitHub Actions** wh
 
 ## 📁 Project Structure
 
-## 📂 Folder Structure
-
+📂 Folder Structure
 ├─ .github/
 │ └─ workflows/
 │ └─ main.yml # CI/CD workflow (see below)
