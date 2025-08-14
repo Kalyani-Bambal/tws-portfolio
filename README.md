@@ -79,9 +79,11 @@ python3 -m http.server 8000
   This repository uses the following workflow (in .github/workflows/main.yml):
   
 ## Add required GitHub Secrets
+```
   In your repo settings → Secrets and variables → Actions:
-    **AWS_ACCESS_KEY_ID
-    **AWS_SECRET_ACCESS_KEY
+   AWS_ACCESS_KEY_ID
+   AWS_SECRET_ACCESS_KEY
+```
 --- 
 
 ## ❗ Troubleshooting
