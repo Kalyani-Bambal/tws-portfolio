@@ -23,5 +23,18 @@ jobs:
         run: |
           aws s3 sync . s3://tws-portfolio-12345 \
             --delete \
+            --exact-timestamps \
             --cache-control "no-cache" \
-            --exact-timestamps
+            --content-type "text/html" --exclude "*" --include "*.html"
+          aws s3 sync . s3://tws-portfolio-12345 \
+            --exact-timestamps \
+            --cache-control "no-cache" \
+            --content-type "text/css" --exclude "*" --include "*.css"
+          aws s3 sync . s3://tws-portfolio-12345 \
+            --exact-timestamps \
+            --cache-control "no-cache" \
+            --content-type "application/javascript" --exclude "*" --include "*.js"
+          aws s3 sync . s3://tws-portfolio-12345 \
+            --exact-timestamps \
+            --cache-control "no-cache" \
+            --exclude "*.html" --exclude "*.css" --exclude "*.js"
